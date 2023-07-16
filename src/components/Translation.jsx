@@ -5,26 +5,23 @@ export default function Translation({ doStuff, setInput, result }) {
   return (
     <>
       <div>
-        <h2>𝒲𝒶𝓉𝒸𝒽 𝒯𝒽𝑒 𝒩𝑒𝓊𝓇𝒶𝓁 𝒲𝑜𝓃𝒹𝑒𝓇</h2>
+        <h2>Watch The Neural Wonder</h2>
         <textarea
           className="text-area"
           cols={75}
-          rows={3}
+          rows={15}
           onChange={(e) => setInput(e.target.value)}
         ></textarea>
       </div>
       <div>
         <button
           className="action-btn"
-          onClick={() => {
-            doStuff();
-            setSample(false);
-          }}
+          onClick={doStuff}
         >
-          Que Miras Bobo ?
+          ➯
         </button>
       </div>
-      {!sample ? (
+      {true ? (
         <h3 className="result-text">{result.length > 0 ? result : ""}</h3>
       ) : (
         <h3 className="result-text">
